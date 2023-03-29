@@ -43,7 +43,33 @@ $ bin/zkServer.sh start 또는 bin/zkServer.sh start-foreground
 
 | quickstart-events
 
-(winodw)
+```
+# Run Zookeeper
+$ bin/zookeeper-server-start.sh config/zookeeper.properties
+
+# Run Kafka
+$ bin/kafka-server-start.sh config/server.properties
+
+# Create Topic
+$ bin/kafka-topics.sh --create --topic quickstart-events --bootstrap-server localhost:9092
+
+# Show List Topic
+$ bin/kafka-topics.sh --list --zookeeper localhost:2181
+
+# Describe Topic
+$ bin/kafka-topics.sh --describe --topic quickstart-events --bootstrap-server localhost:9092
+
+# Write Message
+$ bin/kafka-console-producer.sh --topic quickstart-events --bootstrap-server localhost:9092
+
+# Read Message
+$ bin/kafka-console-consumer.sh --topic quickstart-events --from-beginning --bootstrap-server localhost:9092
+
+# Remove Topic 
+$ bin/kafka-topics.sh --delete --topic quickstart-events --bootstrap-server localhost:9092
+```
+
+(window)
 ```
 > bin\windows\kafka-server-start.bat \config\server.properties
 > .\bin\windows\kafka-topics.bat --create --topic quickstart-events --bootstrap-server localhost:9092
