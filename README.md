@@ -16,16 +16,16 @@ https://zookeeper.apache.org/releases.html
 > bin/zkServer.sh start
 
 or
-
-> $ tar -xzf apache-zookeeper-3.7.1-bin.tar.gz
+```
+$ tar -xzf apache-zookeeper-3.7.1-bin.tar.gz
 $ cd apache-zookeeper-3.7.1-bin
 $ cp conf/zoo_sample.cfg conf/zoo.cfg
 
 # Run Zookeeper
 $ bin/zkServer.sh start 또는 bin/zkServer.sh start-foreground
+```
 
-(window::JAVA_HOME 세팅 되어 있어야 함.)
-> .\bin\zkServer.cmd     
+> .\bin\zkServer.cmd <-- (window::JAVA_HOME 세팅 되어 있어야 함.)     
 
 4. apache kafka https://kafka.apache.org/downloads 
 
